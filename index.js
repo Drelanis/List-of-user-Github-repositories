@@ -54,5 +54,6 @@ export const onButtonShow = () => {
     .finally(() => spinnerLoadElement.classList.add('spinner_hidden'));
 };
 
-window.addEventListener('load', getDefaultUserIcon);
+// window.addEventListener('load', getDefaultUserIcon);
+getDefaultUserIcon();
 buttonShowElement.addEventListener('click', onButtonShow);
