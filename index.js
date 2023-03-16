@@ -32,7 +32,8 @@ export const createRepoList = (data) => {
 export const getRepoList = (url) => {
   fetch(url)
     .then((response) => response.json())
-    .then((data) => createRepoList(data));
+    .then((data) => createRepoList(data))
+    .catch(() => onError());
 };
 
 export const getSomeInfoUser = (userObject) => {
