@@ -40,7 +40,7 @@ export const getSomeInfoUser = (userObject) => {
   const { avatar_url, name, location, repos_url } = userObject;
   userIcon.src = avatar_url;
   userName.textContent = name;
-  userLocation.textContent = location;
+  userLocation.textContent = location ? `from ${location}` : '';
   getRepoList(repos_url);
 };
 
@@ -50,7 +50,6 @@ export const onButtonShow = () => {
   spinnerLoadElement.classList.remove('spinner_hidden');
   onRequest(inputValue)
     .then((response) => getSomeInfoUser(response))
-    .catch(() => onError())
     .finally(() => spinnerLoadElement.classList.add('spinner_hidden'));
 };
 
