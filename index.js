@@ -12,7 +12,7 @@ export const getDefaultUserIcon = () => {
   userIcon.setAttribute('src', defaultUserAvatarUrl);
 };
 
-export const onError = () => alert(new Error('Failed to load data'));
+export const onError = () => alert('Failed to load data');
 
 export const onRequest = (userName) => {
   return fetch(`${baseUrl}/${userName}`)
