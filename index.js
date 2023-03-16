@@ -50,6 +50,7 @@ export const onButtonShow = () => {
   spinnerLoadElement.classList.remove('spinner_hidden');
   onRequest(inputValue)
     .then((response) => getSomeInfoUser(response))
+    .catch(() => onError())
     .finally(() => spinnerLoadElement.classList.add('spinner_hidden'));
 };
 
