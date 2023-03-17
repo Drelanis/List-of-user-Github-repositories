@@ -8,9 +8,8 @@ const userIcon = document.querySelector('.user__avatar');
 const defaultUserAvatarUrl = 'https://avatars3.githubusercontent.com/u10001';
 const baseUrl = 'https://api.github.com/users';
 
-export const getDefaultUserIcon = () => {
+export const getDefaultUserIcon = () =>
   userIcon.setAttribute('src', defaultUserAvatarUrl);
-};
 
 export const onError = () => alert('Failed to load data');
 
@@ -29,11 +28,14 @@ export const createRepoList = (data) => {
   });
 };
 
-export const getRepoList = (url) => {
-  fetch(url)
-    .then((response) => response.json())
-    .then((data) => createRepoList(data))
-    .catch(() => onError());
+export const getRepoList = async (url) => {
+  try {
+    const response = await fetch(url);
+    const userData = await response.json();
+    createRepoList(userData);
+  } catch (error) {
+    onError();
+  }
 };
 
 export const getSomeInfoUser = (userObject) => {
@@ -44,14 +46,18 @@ export const getSomeInfoUser = (userObject) => {
   getRepoList(repos_url);
 };
 
-export const onButtonShow = () => {
+export const onButtonShow = async () => {
   const inputValue = inputElement.value;
   repoListElement.textContent = '';
   spinnerLoadElement.classList.remove('spinner_hidden');
-  onRequest(inputValue)
-    .then((response) => getSomeInfoUser(response))
-    .catch(() => onError())
-    .finally(() => spinnerLoadElement.classList.add('spinner_hidden'));
+  try {
+    const response = await onRequest(inputValue);
+    getSomeInfoUser(response);
+  } catch (error) {
+    onError();
+  } finally {
+    spinnerLoadElement.classList.add('spinner_hidden');
+  }
 };
 
 // window.addEventListener('load', getDefaultUserIcon);
