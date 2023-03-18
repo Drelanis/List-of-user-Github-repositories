@@ -74,6 +74,13 @@
   padding: 4px;
   line-height: 32px;
 }
+.repo-list__item_link {
+  text-decoration: none;
+  color: black;
+}
+.repo-list__item_link:visited {
+  color: black;
+}
 
 @keyframes rotate {
   from {
