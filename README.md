@@ -12,10 +12,9 @@
 <li><a href="https://en.wikipedia.org/wiki/CSS_Flexible_Box_Layout">Flexbox</a></li>
 <li><a href="https://sass-lang.com/">Sass (Scss)</a></li>
 <li><a href="https://en.bem.info/methodology/">BEM methodology</a></li>
-<li>Vanilla JavaScript</li>
-<li>Asynchronouse code</li>
-<li>Local storag</li>
-<li>HTTP</li>
+<li>JavaScript</li>
+<li>Asynchrony</li>
+<li>REST</li>
 <li>DOM</li>
 </ul>
 
