@@ -1,6 +1,6 @@
 <h1>App - List of user github repositories</h1>
 
-<a href="https://drelanis.github.io/ToDo_List/">Site link</a>
+<a href="https://drelanis.github.io/List-of-user-Github-repositories/">Site link</a>
 
 <p>In this application, you can get user's github nickname, name and repositories (for a test, try writing: facebook, google, Drelanis so on). Links to them are also attached to the name of the repositories.</p>
 
