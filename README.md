@@ -2,7 +2,7 @@
 
 <a href="https://drelanis.github.io/List-of-user-Github-repositories/">Site link</a>
 
-<p>In this application, you can get user's github nickname, name and repositories (for a test, try writing: facebook, google, Drelanis so on). Links to them are also attached to the name of the repositories.</p>
+<p>In this application, you can get the name and repositories of the user by writing your or any other nickname on github in the input (for a test, try writing: facebook, google, Drelanis, etc.).  Links to them are also attached to the name of the repositories.</p>
 
 <h4>The tech stack is:</h4>
 
@@ -14,7 +14,7 @@
 <li><a href="https://en.bem.info/methodology/">BEM methodology</a></li>
 <li>JavaScript</li>
 <li>Asynchrony</li>
-<li>REST</li>
+<li>REST API</li>
 <li>DOM</li>
 </ul>
 
